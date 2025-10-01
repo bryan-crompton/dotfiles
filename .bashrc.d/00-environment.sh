@@ -14,6 +14,7 @@ pathadd() {
 }
 
 # echo $PATH
-pathadd $HOME/.cargo/bin
 pathadd $HOME/.local/bin
 pathadd $HOME/bin
+pathadd $HOME/.cargo/bin
+pathadd "$HOME/.juliaup/bin"
