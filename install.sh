@@ -6,12 +6,13 @@ IFS=$'\n\t'
 # Things you want to install: [source_in_repo]=[target_in_home]
 declare -A DOTS=(
   [".bashrc"]=".bashrc"
-  [".bashrc.d"]=".bashrc.d"
+  [".bashrc.d"]=".bashrc.d"]
+  [".tmux.conf"]=".tmux.conf"
 )
 
 # --- flags ----------------------------------------------------------------
 DRY_RUN=false
-VERBOSE=false
+VERBOSE=true
 for arg in "$@"; do
   case "$arg" in
     -n|--dry-run) DRY_RUN=true ;;
