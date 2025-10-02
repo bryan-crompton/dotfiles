@@ -4,7 +4,7 @@ case $- in
     *) return ;;
 esac
 
-source-again () {
+source-bashrc () {
     source ~/.bashrc;
 }
 

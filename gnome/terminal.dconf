@@ -1,0 +1,3 @@
+[legacy/keybindings]
+next-tab='<Primary><Shift>Right'
+prev-tab='<Primary><Shift>Left'
