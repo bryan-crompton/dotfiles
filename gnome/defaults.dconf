@@ -1,0 +1,25 @@
+[org/gnome/desktop/interface]
+clock-format='12h'
+icon-theme='Yaru'
+text-scaling-factor=1.25
+
+[org/gnome/desktop/peripherals/mouse]
+natural-scroll=false
+
+[org/gnome/desktop/peripherals/touchpad]
+natural-scroll=false
+two-finger-scrolling-enabled=true
+
+[org/gnome/gedit/preferences/editor]
+insert-spaces=true
+scheme='cobalt'
+tabs-size=uint32 4
+wrap-last-split-mode='word'
+
+[org/gnome/gnome-system-monitor]
+cpu-smooth-graph=true
+cpu-stacked-area-chart=true
+
+[org/gnome/terminal/legacy/keybindings]
+next-tab='<Primary><Shift>Right'
+prev-tab='<Primary><Shift>Left'
