@@ -1,0 +1,2 @@
+- make sure dock setup is synced
+- make sure common apps are included in dock as shortcuts (may be more complicated)
