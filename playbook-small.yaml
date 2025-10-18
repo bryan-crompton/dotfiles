@@ -37,8 +37,18 @@ apt:
     - cifs-utils
 
 dotfiles:
-  - .bashrc
-  - .tmux.conf
-  - .vim
-  - .git
-  - .config/fitviz
+  default:
+    - .bashrc
+    - .bashrc.d
+    - .tmux.conf
+    - .vim
+    - .git
+    - .config/fitviz
+
+apps:
+  default:
+    - google-chrome
+    - obsidian
+    - tailscale
+    - typora
+    - vscode
