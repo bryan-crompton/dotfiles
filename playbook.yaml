@@ -1,3 +1,14 @@
+meta:
+  hosts:
+    novo:
+      tags: [personal, gaming, laptop]
+    thinkpad:
+      tags: [personal, dev, laptop]
+    beelink:
+      tags: [server, mini]
+    omen2:
+      tags: [work, laptop]
+
 apt:
   - git
   - vim
@@ -33,13 +44,16 @@ apt:
   - samba
   - ffmpeg
   - image-magick
-  - grub-config
+  - grubconfig
   - gzip
   - cifs-utils
 
 dotfiles:
   - .bashrc
   - .tmux.conf
+  - .vim
+  - .git
+  - .config/fitviz
   
 gnome:
   - shortcuts
@@ -61,10 +75,10 @@ apps:
     hosts: [novo, thinkpad, omen2]
 
 pipx:
-  - fitviz
-    - include novo
-  - usage-logger
-    - include novo, thinkpad, omen2
+  - name: fitviz
+    hosts: [novo]
+  - name: usage-logger
+    hosts: [novo, thinkpad, omen2]
 
 mounts:
   - 4tbdata
