@@ -1,0 +1,44 @@
+apt:
+  default:
+    - git
+    - vim
+    - tmux
+    - trash-cli
+    - jq
+    - wl-clipboard
+    - xclip
+    - htop
+    - neofetch
+    - inxi
+    - smartmontools
+    - xdg-utils
+    - curl
+    - wget
+    - fdclone
+    - ripgrep
+    - pipx
+    - glances
+    - traceroute
+    - build-essential
+    - xdotool
+    - wmctrl
+    - pandoc
+    - ncdu
+    - lm-sensors
+    - iw
+    - hostname
+    - gedit
+    - sqlitebrowser
+    - rename
+    - samba
+    - ffmpeg
+    - imagemagick
+    - gzip
+    - cifs-utils
+
+dotfiles:
+  - .bashrc
+  - .tmux.conf
+  - .vim
+  - .git
+  - .config/fitviz
