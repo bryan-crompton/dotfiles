@@ -9,21 +9,20 @@ from pathlib import Path
 with open("playbook-small.yaml", "r") as f:  
     config = yaml.safe_load(f)
 
-apt_packages = config.get("apt", {}).get("default", [])
-if apt_packages:
-    print(f"Installing {len(apt_packages)} apt packages...")
-    subprocess.run(["sudo", "apt", "update"], check=True)
-    subprocess.run(["sudo", "apt", "install", "-y"] + apt_packages, check=True)
-else:
-    print("No apt packages found in config.")
+# apt_packages = config.get("apt", {}).get("default", [])
+# if apt_packages:
+#     print(f"Installing {len(apt_packages)} apt packages...")
+#     subprocess.run(["sudo", "apt", "update"], check=True)
+#     subprocess.run(["sudo", "apt", "install", "-y"] + apt_packages, check=True)
+# else:
+#     print("No apt packages found in config.")
 # --- Dotfile setup ---
 dotfiles_dir = Path("dotfiles")
 home = Path.home()
 backup_dir = home / f".dotfile_backups_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
 backup_dir.mkdir(exist_ok=True)
 
-dotfiles = config.get("dotfiles", {}).get("default", [])
-#dotfiles = config.get("dotfiles", [])
+dotfiles = config.get("dotfiles", [])
 if not dotfiles:
     print("⚠️  No dotfiles listed in config.")
 else:
@@ -59,4 +58,3 @@ else:
     print(f"✅ All dotfiles linked (backups at {backup_dir})")
 
 print("🎉 Setup complete.")
-
